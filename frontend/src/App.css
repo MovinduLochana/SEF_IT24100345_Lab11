@@ -1,0 +1,179 @@
+/* ==========================================================================
+   CampusEats Dashboard - Global & Component Styles
+   ========================================================================== */
+
+/* Main Layout & Navigation */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 24px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+}
+
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+nav a:hover {
+  color: var(--text-h);
+  background: var(--accent-bg);
+}
+
+nav a.active {
+  color: #fff;
+  background: var(--accent);
+}
+
+/* Page Container Defaults */
+#root > div {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px 40px;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+/* Search Input */
+input[placeholder="Search dishes..."] {
+  display: block;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto 28px;
+  padding: 12px 18px;
+  font-size: 15px;
+  color: var(--text-h);
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input[placeholder="Search dishes..."]:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-bg);
+}
+
+/* Menu Grid */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+/* Dish Card */
+.dish-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.dish-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent-border);
+}
+
+.dish-card h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+.dish-card p {
+  margin: 0 0 14px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.dish-card small {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text);
+  background: var(--code-bg);
+  border-radius: 20px;
+  width: fit-content;
+}
+
+.dish-card span {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #ef4444;
+}
+
+/* Order Form */
+form {
+  max-width: 420px;
+  margin: 32px auto;
+  padding: 28px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+form input {
+  width: 100%;
+  padding: 10px 14px;
+  margin-top: 6px;
+  font-size: 14px;
+  color: var(--text-h);
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+form input:focus {
+  border-color: var(--accent);
+}
+
+form span {
+  display: block;
+  font-size: 12px;
+  color: #ef4444;
+  margin-top: 4px;
+}
+
+form button {
+  width: 100%;
+  margin-top: 18px;
+  padding: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  background: var(--accent);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+form button:hover {
+  opacity: 0.9;
+}
